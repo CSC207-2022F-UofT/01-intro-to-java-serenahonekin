@@ -120,7 +120,7 @@ public class Basics {
      *    about what is returned.
      *
      * Create a String named 'ret' and get the first letter of
-     * each word inside to_string. to_string is a String containing exactly
+     * each word inside to_split. to_split is a String containing exactly
      * 7 words, separated by spaces.
      *
      * You may want to use String.split() and String.charAt() methods.
@@ -145,12 +145,12 @@ public class Basics {
          *                separated by spaces, so no loops are required, though
          *                you may use them if you wish.
          */
-        StringBuilder ret = new StringBuilder();
+        String ret = "";
         String[] separated = to_split.split(" ", 7);
         for (String word: separated){
-            ret.append(word.charAt(0));
+            ret = ret + word.charAt(0);
         }
-        return ret.toString();
+        return ret;
     }
 
     /**
@@ -177,7 +177,7 @@ public class Basics {
          *                (e.g. arr[i] gives you the item at index i).
          */
         if (arr.length > 1){
-            for (int i = 0; i < arr.length; i = i + 2){
+            for (int i = 1; i < arr.length; i = i + 2){
                 current_sum += arr[i];
             }
         }
